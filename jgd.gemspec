@@ -4,10 +4,10 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.rubygems_version = '2.2.2'
   s.required_ruby_version = '>= 1.9.3'
-  s.name = 'jdg'
+  s.name = 'jgd'
   s.version = '1.0'
   s.license = 'MIT'
-  s.summary     = "Jekyll Github Deploy"
+  s.summary = "Jekyll Github Deploy"
   s.description = "Automated deployment of your Jekyll blog to Github Pages"
   s.authors = ["Yegor Bugayenko"]
   s.email = 'yegor@tpc2.com'
