@@ -27,5 +27,11 @@ env:
     - secure: ...
 install:
   - bundle
-script: jgd -u http://yegor256:${PASSWORD}@github.com/yegor256/blog.git
+script: jgd -u http://yegor256:$PASSWORD@github.com/yegor256/blog.git
 ```
+
+The environment variable `$PASSWORD` is set through
+`env/global/secure`, as explained
+[here](http://docs.travis-ci.com/user/encryption-keys/).
+
+Don't forget to add `gem require 'jgd'` to your `Gemfile`.
