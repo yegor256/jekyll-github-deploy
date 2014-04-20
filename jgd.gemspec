@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
   s.rubygems_version = '2.2.2'
   s.required_ruby_version = '>= 1.9.3'
   s.name = 'jgd'
-  s.version = '1.0'
+  s.version = '1.1'
   s.license = 'MIT'
   s.summary = "Jekyll Github Deploy"
   s.description = "Automated deployment of your Jekyll blog to Github Pages"
@@ -17,5 +17,6 @@ Gem::Specification.new do |s|
   s.test_files = s.files.grep(%r{^(test|spec|features)/})
   s.rdoc_options = ["--charset=UTF-8"]
   s.extra_rdoc_files = %w[README.md LICENSE.txt]
-  s.add_runtime_dependency('jekyll')
+  s.add_runtime_dependency('trollop', '2.0')
+  s.add_runtime_dependency('jekyll', '1.5.1')
 end

@@ -27,5 +27,5 @@ env:
     - secure: ...
 install:
   - bundle
-script: jgd --url=http://yegor256:${PASSWORD}@github.com/yegor256/blog.git
+script: jgd -u http://yegor256:${PASSWORD}@github.com/yegor256/blog.git
 ```
