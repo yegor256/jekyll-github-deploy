@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+STDOUT.sync = true
+
+spec = Gem::Specification.find_by_name("jgd")
+root = spec.gem_dir
+script = File.join(root, 'bash/deploy.sh')
+
+%x[ #{script} test ]
