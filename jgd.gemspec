@@ -16,6 +16,6 @@ Gem::Specification.new do |s|
   s.executables = s.files.grep(%r{^bin/}) { |f| File.basename(f) }
   s.test_files = s.files.grep(%r{^(test|spec|features)/})
   s.rdoc_options = ["--charset=UTF-8"]
-  s.extra_rdoc_files = %w[README.markdown LICENSE]
+  s.extra_rdoc_files = %w[README.md LICENSE.txt]
   s.add_runtime_dependency('jekyll')
 end
