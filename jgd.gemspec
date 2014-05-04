@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
   s.rubygems_version = '2.2.2'
   s.required_ruby_version = '>= 1.9.3'
   s.name = 'jgd'
-  s.version = '1.1'
+  s.version = '1.2'
   s.license = 'MIT'
   s.summary = "Jekyll Github Deploy"
   s.description = "Automated deployment of your Jekyll blog to Github Pages"

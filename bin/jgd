@@ -19,4 +19,6 @@ end
 spec = Gem::Specification.find_by_name("jgd")
 root = spec.gem_dir
 script = File.join(root, 'bash/deploy.sh')
-system("#{script} #{url}")
+if !system("#{script} #{url}")
+  raise "deployment failed, see log above"
+end
