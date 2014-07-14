@@ -1,3 +1,5 @@
+[![Gem Version](https://badge.fury.io/rb/jgd.svg)](http://badge.fury.io/rb/jgd)
+
 It is assumed that your blog is in the home directory of your repo.
 
 Install it first:
