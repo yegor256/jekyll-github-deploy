@@ -18,5 +18,5 @@ Gem::Specification.new do |s|
   s.rdoc_options = ["--charset=UTF-8"]
   s.extra_rdoc_files = %w[README.md LICENSE.txt]
   s.add_runtime_dependency('trollop', '2.0')
-  s.add_runtime_dependency('jekyll', '1.5.1')
+  s.add_runtime_dependency('jekyll', '>=1.5.1')
 end
