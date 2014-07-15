@@ -5,5 +5,6 @@ release:
   script:
     - "rm -rf *.gem"
     - "gem build jgd.gemspec"
+    - "chmod 0600 ../rubygems.yml"
     - "gem push --key ../rubygems.yml *.gem"
 
