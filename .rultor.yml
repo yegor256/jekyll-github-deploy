@@ -1,0 +1,9 @@
+assets:
+  rubygems.yml: yegor256/home#assets/rubygems.yml
+
+release:
+  script:
+    - "rm -rf *.gem"
+    - "gem build jgd.gemspec"
+    - "gem push --key ../rubygems.yml *.gem"
+
