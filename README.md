@@ -37,3 +37,5 @@ The environment variable `$PASSWORD` is set through
 [here](http://docs.travis-ci.com/user/encryption-keys/).
 
 Don't forget to add `gem require 'jgd'` to your `Gemfile`.
+
+Read also [this article](http://www.yegor256.com/2014/06/22/jekyll-github-deploy.html).
