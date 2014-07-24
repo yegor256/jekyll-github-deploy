@@ -5,5 +5,5 @@ branches:
 install:
   - bundle install
 script:
-  - test.sh
+  - ./test.sh
 
