@@ -28,6 +28,11 @@ else
   jekyll build
 fi
 
+if [ ! -e _site ]; then
+    echo -e "\nJekyll didn't generate anything in _site!"
+    exit -1
+fi
+
 cp -R _site ${TEMP}
 
 echo -e "\nPreparing gh-pages branch:"
