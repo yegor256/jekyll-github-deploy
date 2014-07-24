@@ -12,9 +12,9 @@ git clone "${URL}" "${CLONE}"
 
 echo -e "\nRegistering variables:"
 cd "${CLONE}"
-USER_EMAIL=$(git config --get user.email)
+USER_EMAIL=$(git config --get user.email | cat)
 USER_EMAIL=${USER_EMAIL:-"jgd@teamed.io"}
-USER_NAME=$(git config --get user.name)
+USER_NAME=$(git config --get user.name | cat)
 USER_NAME=${USER_NAME:-"jekyll-github-deploy"}
 
 VERSION=$(git describe --always --tag)
@@ -29,8 +29,8 @@ else
 fi
 
 if [ ! -e _site ]; then
-    echo -e "\nJekyll didn't generate anything in _site!"
-    exit -1
+  echo -e "\nJekyll didn't generate anything in _site!"
+  exit -1
 fi
 
 cp -R _site ${TEMP}
