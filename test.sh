@@ -18,6 +18,9 @@ cd "${CWD}"
 
 cd "${TMP}"
 git checkout gh-pages
-cat test.html
+ls -al
+cat test.html | grep "hello"
 cd "${CWD}"
 rm -rf "${TMP}"
+
+echo "success"
