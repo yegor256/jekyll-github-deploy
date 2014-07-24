@@ -15,4 +15,9 @@ git commit -am 'initial commit'
 cd "${CWD}"
 
 ./bash/deploy.sh "${TMP}"
+
+cd "${TMP}"
+git checkout gh-pages
+cat test.html
+cd "${CWD}"
 rm -rf "${TMP}"
