@@ -21,7 +21,13 @@ VERSION=$(git describe --always --tag)
 
 echo -e "\nBuilding Jekyll site:"
 rm -rf _site
-jekyll build
+
+if [ -r _config-deploy.yml ]; then
+  jekyll build --config _config.yml,_config-deploy.yml
+else
+  jekyll build
+fi
+
 cp -R _site ${TEMP}
 
 echo -e "\nPreparing gh-pages branch:"
