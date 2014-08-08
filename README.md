@@ -1,3 +1,5 @@
+[![Made By Teamed.io](http://img.teamed.io/btn.svg)](http://www.teamed.io)
+
 [![Build Status](https://travis-ci.org/yegor256/jekyll-github-deploy.svg)](https://travis-ci.org/yegor256/jekyll-github-deploy)
 [![Gem Version](https://badge.fury.io/rb/jgd.svg)](http://badge.fury.io/rb/jgd)
 
