@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/yegor256/jekyll-github-deploy.svg)](https://travis-ci.org/yegor256/jekyll-github-deploy)
 [![Gem Version](https://badge.fury.io/rb/jgd.svg)](http://badge.fury.io/rb/jgd)
+[![Dependency Status](https://gemnasium.com/yegor256/jekyll-github-deploy.svg)](https://gemnasium.com/yegor256/jekyll-github-deploy)
+[![Code Climate](http://img.shields.io/codeclimate/github/yegor256/jekyll-github-deploy.svg)](https://codeclimate.com/github/yegor256/jekyll-github-deploy)
 
 # What is jgd ?
 
