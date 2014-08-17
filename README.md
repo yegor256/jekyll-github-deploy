@@ -1,4 +1,5 @@
 [![Made By Teamed.io](http://img.teamed.io/btn.svg)](http://www.teamed.io)
+[![DevOps By Rultor.com](http://www.rultor.com/b/yegor256/jekyll-github-deploy)](http://www.rultor.com/p/yegor256/jekyll-github-deploy)
 
 [![Build Status](https://travis-ci.org/yegor256/jekyll-github-deploy.svg)](https://travis-ci.org/yegor256/jekyll-github-deploy)
 [![Gem Version](https://badge.fury.io/rb/jgd.svg)](http://badge.fury.io/rb/jgd)
