@@ -1,5 +1,5 @@
-assets:
-  rubygems.yml: "yegor256/home#assets/rubygems.yml"
+decrypt:
+  rubygems.yml: "repo/rubygems.yml.asc"
 
 release:
   script:
