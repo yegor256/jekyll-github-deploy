@@ -14,6 +14,8 @@ echo -e "\nRegistering variables:"
 cd "${CLONE}"
 USER_EMAIL=$(git config --get user.email | cat)
 USER_NAME=$(git config --get user.name | cat)
+echo "user.name=${USER_NAME}"
+echo "user.email=${USER_EMAIL}"
 if [ "${USER_EMAIL}" = "" -o "${USER_NAME}" = "" ]; then
   echo "user.email or user.name is not configured in Git repository"
   echo "see https://help.github.com/articles/setting-your-email-in-git/"
