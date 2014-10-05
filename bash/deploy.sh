@@ -9,10 +9,7 @@ CLONE=${TEMP}/clone
 
 echo -e "Cloning Github repository:"
 git clone "${URL}" "${CLONE}"
-
-echo -e "\nRegistering variables:"
 cd "${CLONE}"
-VERSION=$(git describe --always --tag)
 
 echo -e "\nBuilding Jekyll site:"
 rm -rf _site
@@ -42,7 +39,7 @@ rm -rf *
 cp -R ${TEMP}/_site/* .
 rm -f README.md
 git add .
-git commit -am "new site version ${VERSION} deployed" --allow-empty
+git commit -am "new version $(date)" --allow-empty
 git push origin gh-pages 2>&1 | sed 's|'$URL'|[skipped]|g'
 
 echo -e "\nCleaning up:"
