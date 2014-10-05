@@ -13,9 +13,12 @@ git clone "${URL}" "${CLONE}"
 echo -e "\nRegistering variables:"
 cd "${CLONE}"
 USER_EMAIL=$(git config --get user.email | cat)
-USER_EMAIL=${USER_EMAIL:-"jgd@teamed.io"}
 USER_NAME=$(git config --get user.name | cat)
-USER_NAME=${USER_NAME:-"jekyll-github-deploy"}
+if [ "${USER_EMAIL}" = "" -o "${USER_NAME}" = "" ]; then
+  echo "user.email or user.name is not configured in Git repository"
+  echo "see https://help.github.com/articles/setting-your-email-in-git/"
+  exit -1
+fi
 
 VERSION=$(git describe --always --tag)
 
