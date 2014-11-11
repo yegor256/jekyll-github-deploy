@@ -66,4 +66,17 @@ The environment variable `$PASSWORD` is set through
 
 Don't forget to add `gem require 'jgd'` to your `Gemfile`.
 
+You can use SSH key instead. First, you should encrypt it:
+
+```bash
+$ travis encrypt-file id_rsa --add
+```
+
+Then, use the URI that starts with `git@`:
+
+```yaml
+script:
+  - jgd -u git@github.com:yegor256/blog.git
+```
+
 Read also [this article](http://www.yegor256.com/2014/06/22/jekyll-github-deploy.html).
