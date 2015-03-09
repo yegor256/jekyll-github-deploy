@@ -1,4 +1,5 @@
-decrypt: {rubygems.yml: repo/rubygems.yml.asc}
+decrypt:
+  rubygems.yml: repo/rubygems.yml.asc
 release:
   script: |-
     git config --global user.email "test@example.com"
@@ -9,4 +10,7 @@ release:
     gem build jgd.gemspec
     chmod 0600 ../rubygems.yml
     gem push *.gem --config-file ../rubygems.yml
-architect: [yegor256, yegor256, davvd]
+architect:
+- yegor256
+- yegor256
+- davvd
