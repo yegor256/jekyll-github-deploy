@@ -11,6 +11,5 @@ release:
     chmod 0600 ../rubygems.yml
     gem push *.gem --config-file ../rubygems.yml
 architect:
-- yegor256
-- yegor256
 - davvd
+- yegor256
