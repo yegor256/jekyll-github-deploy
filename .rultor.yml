@@ -13,3 +13,6 @@ release:
 architect:
 - davvd
 - yegor256
+merge:
+  commanders:
+  - yegor256
