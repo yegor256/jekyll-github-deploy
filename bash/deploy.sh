@@ -8,9 +8,12 @@ SRC=$(pwd)
 TEMP=$(mktemp -d -t jgd-XXX)
 trap "rm -rf ${TEMP}" EXIT
 CLONE=${TEMP}/clone
+CLONE=${TEMP}/copy
 
 echo -e "Cloning Github repository:"
 git clone "${URL}" "${CLONE}"
+cp -R ${CLONE} ${COPY}
+
 cd "${CLONE}"
 
 echo -e "\nBuilding Jekyll site:"
@@ -29,7 +32,10 @@ fi
 
 cp -R _site ${TEMP}
 
-git clean -fd
+cd ${TEMP}
+rm -rf ${CLONE}
+mv ${COPY} ${CLONE}
+cd ${CLONE}
 
 echo -e "\nPreparing gh-pages branch:"
 if [ -z "$(git branch -a | grep origin/gh-pages)" ]; then
