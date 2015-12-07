@@ -29,6 +29,8 @@ fi
 
 cp -R _site ${TEMP}
 
+git clean -fd
+
 echo -e "\nPreparing gh-pages branch:"
 if [ -z "$(git branch -a | grep origin/gh-pages)" ]; then
   git checkout --orphan gh-pages
