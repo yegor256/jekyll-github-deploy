@@ -8,7 +8,7 @@ SRC=$(pwd)
 TEMP=$(mktemp -d -t jgd-XXX)
 trap "rm -rf ${TEMP}" EXIT
 CLONE=${TEMP}/clone
-CLONE=${TEMP}/copy
+COPY=${TEMP}/copy
 
 echo -e "Cloning Github repository:"
 git clone "${URL}" "${CLONE}"
