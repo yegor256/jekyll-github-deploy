@@ -66,7 +66,7 @@ The environment variable `$PASSWORD` is set through
 
 Don't forget to add `gem require 'jgd'` to your `Gemfile`.
 
-You can use SSH key instead. First, you should encrypt it:
+You can use SSH key instead. First, you should [encrypt](https://docs.travis-ci.com/user/encrypting-files/) it:
 
 ```bash
 $ travis encrypt-file id_rsa --add
