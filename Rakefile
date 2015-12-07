@@ -36,7 +36,7 @@ def version
   Gem::Specification.load(Dir['*.gemspec'].first).version
 end
 
-task default: [:clean, :test, :features, :rubocop]
+task default: [:clean, :test, :rubocop]
 
 require 'rake/testtask'
 desc 'Run all unit tests'
@@ -60,12 +60,4 @@ desc 'Run RuboCop on all directories'
 RuboCop::RakeTask.new(:rubocop) do |task|
   task.fail_on_error = true
   task.requires << 'rubocop-rspec'
-end
-
-require 'cucumber/rake/task'
-Cucumber::Rake::Task.new(:features) do |t|
-  t.profile = 'travis'
-end
-Cucumber::Rake::Task.new(:"features:html") do |t|
-  t.profile = 'html_report'
 end
