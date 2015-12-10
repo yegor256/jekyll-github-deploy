@@ -9,8 +9,10 @@ jgd is an automated deployer of Jekyll site to Github Pages
 Usage: jgd [options]
   EOS
   opt :url, 'Github URL', type: String, default: ''
+  opt :branch, 'Destination branch', type: String, default: 'gh-pages'
 end
 
+branch = opts[:branch]
 url = opts[:url]
 url = `git config --get remote.origin.url` if url.empty?
 
@@ -18,4 +20,4 @@ spec = Gem::Specification.find_by_name('jgd')
 root = spec.gem_dir
 script = File.join(root, 'bash/deploy.sh')
 
-fail 'deployment failed, see log above' unless system("#{script} #{url}")
+fail 'deployment failed, see log above' unless system("#{script} #{url} #{branch}")

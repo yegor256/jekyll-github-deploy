@@ -3,8 +3,8 @@ set -x
 set -e
 set -o pipefail
 
-BRANCH=gh-pages
 URL=$1
+BRANCH=$2
 SRC=$(pwd)
 TEMP=$(mktemp -d -t jgd-XXX)
 trap "rm -rf ${TEMP}" EXIT
