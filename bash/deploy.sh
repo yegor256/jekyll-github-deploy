@@ -3,6 +3,7 @@ set -x
 set -e
 set -o pipefail
 
+BRANCH=gh-pages
 URL=$1
 SRC=$(pwd)
 TEMP=$(mktemp -d -t jgd-XXX)
@@ -37,20 +38,20 @@ rm -rf ${CLONE}
 mv ${COPY} ${CLONE}
 cd ${CLONE}
 
-echo -e "\nPreparing gh-pages branch:"
-if [ -z "$(git branch -a | grep origin/gh-pages)" ]; then
-  git checkout --orphan gh-pages
+echo -e "\nPreparing ${BRANCH} branch:"
+if [ -z "$(git branch -a | grep origin/${BRANCH})" ]; then
+  git checkout --orphan "${BRANCH}"
 else
-  git checkout gh-pages
+  git checkout "${BRANCH}"
 fi
 
-echo -e "\nDeploying into gh-pages branch:"
+echo -e "\nDeploying into ${BRANCH} branch:"
 rm -rf *
 cp -R ${TEMP}/_site/* .
 rm -f README.md
 git add .
 git commit -am "new version $(date)" --allow-empty
-git push origin gh-pages 2>&1 | sed 's|'$URL'|[skipped]|g'
+git push origin ${BRANCH} 2>&1 | sed 's|'$URL'|[skipped]|g'
 
 echo -e "\nCleaning up:"
 rm -rf "${CLONE}"
