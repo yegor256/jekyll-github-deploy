@@ -1,4 +1,4 @@
 ## Puzzles
 
-There are 0 active puzzles (0 total), updated on 2015-12-09T12:43:32Z:
+There are 0 active puzzles (0 total):
 
