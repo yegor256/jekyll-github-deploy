@@ -2,7 +2,7 @@
 set -e
 set -x
 
-TMP=$(mktemp -d -t jgd-XXXX)
+TMP=$(mktemp -d -t mgd-XXXX)
 
 CWD=$(pwd)
 git init "${TMP}"

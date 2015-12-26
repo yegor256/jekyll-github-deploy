@@ -6,37 +6,32 @@ set -o pipefail
 URL=$1
 BRANCH=$2
 SRC=$(pwd)
-TEMP=$(mktemp -d -t jgd-XXX)
-trap "rm -rf ${TEMP}" EXIT
+TEMP=$(mktemp -d -t mgd-XXX)
+trap 'rm -rf ${TEMP}' EXIT
 CLONE=${TEMP}/clone
 COPY=${TEMP}/copy
 
 echo -e "Cloning Github repository:"
 git clone "${URL}" "${CLONE}"
-cp -R ${CLONE} ${COPY}
+cp -R "${CLONE}" "${COPY}"
 
 cd "${CLONE}"
 
-echo -e "\nBuilding Jekyll site:"
-rm -rf _site
+echo -e "\nBuilding Middleman site:"
+rm -rf build
+middleman build
 
-if [ -r _config-deploy.yml ]; then
-  jekyll build --config _config.yml,_config-deploy.yml
-else
-  jekyll build
-fi
-
-if [ ! -e _site ]; then
-  echo -e "\nJekyll didn't generate anything in _site!"
+if [ ! -e build ]; then
+  echo -e "\nMiddleman didn't generate anything in build!"
   exit -1
 fi
 
-cp -R _site ${TEMP}
+cp -R build "${TEMP}"
 
-cd ${TEMP}
-rm -rf ${CLONE}
-mv ${COPY} ${CLONE}
-cd ${CLONE}
+cd "${TEMP}"
+rm -rf "${CLONE}"
+mv "${COPY}" "${CLONE}"
+cd "${CLONE}"
 
 echo -e "\nPreparing ${BRANCH} branch:"
 if [ -z "$(git branch -a | grep origin/${BRANCH})" ]; then
@@ -47,11 +42,11 @@ fi
 
 echo -e "\nDeploying into ${BRANCH} branch:"
 rm -rf *
-cp -R ${TEMP}/_site/* .
+cp -R ${TEMP}/build/* .
 rm -f README.md
 git add .
 git commit -am "new version $(date)" --allow-empty
-git push origin ${BRANCH} 2>&1 | sed 's|'$URL'|[skipped]|g'
+git push origin "${BRANCH}" 2>&1 | sed 's|'$URL'|[skipped]|g'
 
 echo -e "\nCleaning up:"
 rm -rf "${CLONE}"
