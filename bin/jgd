@@ -15,7 +15,7 @@ end
 branch = opts[:branch]
 fail 'branch can\'t be empty' if branch.empty?
 url = opts[:url]
-url = `git config --get remote.origin.url` if url.empty?
+url = `git config --get remote.origin.url`.strip if url.empty?
 
 spec = Gem::Specification.find_by_name('jgd')
 root = spec.gem_dir
