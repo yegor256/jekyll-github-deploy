@@ -1,9 +1,10 @@
 decrypt:
   rubygems.yml: repo/rubygems.yml.asc
+install: |-
+  git config --global user.email "test@example.com"
+  git config --global user.name "Test"
 release:
   script: |-
-    git config --global user.email "test@example.com"
-    git config --global user.name "Test"
     ./test.sh
     rm -rf *.gem
     sed -i "s/2.0.snapshot/${tag}/g" jgd.gemspec
