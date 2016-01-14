@@ -18,6 +18,5 @@ architect:
 - davvd
 merge:
   commanders: []
-  script: |-
-    ./test.sh
+  script: ./test.sh
 deploy: {}
