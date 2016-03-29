@@ -80,7 +80,7 @@ script:
   - jgd -u git@github.com:yegor256/blog.git
 ```
 
-Read also [this article](http://www.yegor256.com/2014/06/22/jekyll-github-deploy.html).
+Read also [this article](http://www.yegor256.com/2014/06/24/jekyll-github-deploy.html).
 
 PS. You can also specify target branch, with is `gh-pages` by default. Use
 `--branch` command line option.
