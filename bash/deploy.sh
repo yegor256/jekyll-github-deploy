@@ -5,6 +5,7 @@ set -o pipefail
 
 URL=$1
 BRANCH=$2
+BRANCH_FROM=$3
 SRC=$(pwd)
 TEMP=$(mktemp -d -t jgd-XXX)
 trap "rm -rf ${TEMP}" EXIT
@@ -12,7 +13,7 @@ CLONE=${TEMP}/clone
 COPY=${TEMP}/copy
 
 echo -e "Cloning Github repository:"
-git clone "${URL}" "${CLONE}"
+git clone -b "${BRANCH_FROM}" "${URL}" "${CLONE}"
 cp -R ${CLONE} ${COPY}
 
 cd "${CLONE}"

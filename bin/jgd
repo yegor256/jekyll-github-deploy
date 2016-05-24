@@ -10,10 +10,13 @@ Usage: jgd [options]
   EOS
   opt :url, 'Github URL', type: String, default: ''
   opt :branch, 'Destination branch', type: String, default: 'gh-pages'
+  opt :branch_from, 'Source branch', type: String, default: 'master'
 end
 
 branch = opts[:branch]
+branch_from = opts[:branch_from]
 fail 'branch can\'t be empty' if branch.empty?
+fail 'branch-from can\'t be empty' if branch_from.empty?
 url = opts[:url]
 url = `git config --get remote.origin.url`.strip if url.empty?
 
@@ -22,4 +25,4 @@ root = spec.gem_dir
 script = File.join(root, 'bash/deploy.sh')
 
 fail 'deployment failed, see log above' \
-  unless system("#{script} #{url} #{branch}")
+  unless system("#{script} #{url} #{branch} #{branch_from}")
