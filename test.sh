@@ -14,7 +14,7 @@ git config user.name "Test"
 git commit -am 'initial commit'
 cd "${CWD}"
 
-./bash/deploy.sh "${TMP}" gh-pages
+./bash/deploy.sh "${TMP}" gh-pages master
 
 cd "${TMP}"
 git checkout gh-pages
