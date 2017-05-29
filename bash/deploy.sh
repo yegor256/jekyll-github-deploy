@@ -6,6 +6,7 @@ set -o pipefail
 URL=$1
 BRANCH=$2
 BRANCH_FROM=$3
+DEPLOY_CONFIG=$4
 SRC=$(pwd)
 TEMP=$(mktemp -d -t jgd-XXX)
 trap "rm -rf ${TEMP}" EXIT
@@ -21,8 +22,8 @@ cd "${CLONE}"
 echo -e "\nBuilding Jekyll site:"
 rm -rf _site
 
-if [ -r _config-deploy.yml ]; then
-  jekyll build --config _config.yml,_config-deploy.yml
+if [ -r ${DEPLOY_CONFIG} ]; then
+  jekyll build --config _config.yml,${DEPLOY_CONFIG}
 else
   jekyll build
 fi
