@@ -7,6 +7,7 @@ URL=$1
 BRANCH=$2
 BRANCH_FROM=$3
 DEPLOY_CONFIG=$4
+BUNDLE=$5
 SRC=$(pwd)
 TEMP=$(mktemp -d -t jgd-XXX)
 trap "rm -rf ${TEMP}" EXIT
@@ -22,10 +23,18 @@ cd "${CLONE}"
 echo -e "\nBuilding Jekyll site:"
 rm -rf _site
 
-if [ -r ${DEPLOY_CONFIG} ]; then
-  jekyll build --config _config.yml,${DEPLOY_CONFIG}
+if [ -r ${BUNDLE} ]; then
+  if [ -r ${DEPLOY_CONFIG} ]; then
+    bundle exec jekyll build --config _config.yml,${DEPLOY_CONFIG}
+  else
+    bundle exec jekyll build
+  fi
 else
-  jekyll build
+  if [ -r ${DEPLOY_CONFIG} ]; then
+    jekyll build --config _config.yml,${DEPLOY_CONFIG}
+  else
+    jekyll build
+  fi
 fi
 
 if [ ! -e _site ]; then
