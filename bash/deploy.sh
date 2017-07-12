@@ -23,18 +23,10 @@ cd "${CLONE}"
 echo -e "\nBuilding Jekyll site:"
 rm -rf _site
 
-if [ -r ${BUNDLE} ]; then
-  if [ -r ${DEPLOY_CONFIG} ]; then
-    bundle exec jekyll build --config _config.yml,${DEPLOY_CONFIG}
-  else
-    bundle exec jekyll build
-  fi
+if [ -r ${DEPLOY_CONFIG} ]; then
+  ${BUNDLE} jekyll build --config _config.yml,${DEPLOY_CONFIG}
 else
-  if [ -r ${DEPLOY_CONFIG} ]; then
-    jekyll build --config _config.yml,${DEPLOY_CONFIG}
-  else
-    jekyll build
-  fi
+  ${BUNDLE} jekyll build
 fi
 
 if [ ! -e _site ]; then
