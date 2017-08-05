@@ -8,6 +8,7 @@ BRANCH=$2
 BRANCH_FROM=$3
 DEPLOY_CONFIG=$4
 BUNDLE=$5
+DRAFTS=$6
 SRC=$(pwd)
 TEMP=$(mktemp -d -t jgd-XXX)
 trap "rm -rf ${TEMP}" EXIT
@@ -24,9 +25,9 @@ echo -e "\nBuilding Jekyll site:"
 rm -rf _site
 
 if [ -r ${DEPLOY_CONFIG} ]; then
-  ${BUNDLE} jekyll build --config _config.yml,${DEPLOY_CONFIG}
+  ${BUNDLE} jekyll build --config _config.yml,${DEPLOY_CONFIG} ${DRAFTS}
 else
-  ${BUNDLE} jekyll build
+  ${BUNDLE} jekyll build ${DRAFTS}
 fi
 
 if [ ! -e _site ]; then
