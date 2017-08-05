@@ -34,7 +34,7 @@ jgd
 
 Now your site is deployed to `gh-pages` branch of your repo. Done.
 
-## Comand Line Options
+## Command Line Options
 
 Below is a list of all command line options.
 
