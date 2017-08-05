@@ -44,6 +44,7 @@ Below is a list of all command line options.
 | `-b` or `--branch` | The branch to push your site to. Defaults to `gh-pages`. If the branch does not exist, it will be created. |
 | `-r` or `--branch-from` | The source branch. Defaults to `master`. |
 | `-c` or `--config` | Name of the optional deploy config file. See [Production variables](#production-variables) below for more information. |
+| `-d` or `--drafts` | Adds the `--drafts` option to Jekyll so that it will build draft posts. |
 | `-h` or `--help` | Displays a list of all options. |
 
 ## Production variables
