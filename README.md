@@ -106,3 +106,23 @@ In order to build a package locally run below commands.
 gem build jgd.gemspec
 gem install jgd-<version>.gem
 ```
+
+## How to Contribute
+
+First, install
+[Ruby 2.3+](https://www.ruby-lang.org/en/documentation/installation/),
+[Rubygems](https://rubygems.org/pages/download),
+and
+[Bundler](https://bundler.io/).
+Then:
+
+```bash
+$ bundle update
+$ bundle exec rake --quiet
+$ ./tesh.sh
+```
+
+The build has to be clean. If it's not, [submit an issue](https://github.com/zold-io/out/issues).
+
+Then, make your changes, make sure the build is still clean,
+and [submit a pull request](https://www.yegor256.com/2014/04/15/github-guidelines.html).
