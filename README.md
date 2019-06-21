@@ -24,13 +24,13 @@ It is assumed that your blog is in the home directory of your repo.
 Install it first:
 
 ```bash
-gem install jgd
+$ gem install jgd
 ```
 
 Run it locally:
 
 ```bash
-jgd
+$ jgd
 ```
 
 Now your site is deployed to `gh-pages` branch of your repo. Done.
