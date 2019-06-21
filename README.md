@@ -98,8 +98,6 @@ script:
   - jgd -u git@github.com:yegor256/blog.git
 ```
 
-Read also [this article](http://www.yegor256.com/2014/06/24/jekyll-github-deploy.html).
-
 ## Building locally
 
 In order to build a package locally run below commands.
