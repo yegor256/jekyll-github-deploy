@@ -44,6 +44,7 @@ Gem::Specification.new do |s|
   s.extra_rdoc_files = ['README.md', 'LICENSE.txt']
   s.add_runtime_dependency('jekyll', '>=1.5.1')
   s.add_runtime_dependency('trollop', '2.9.9')
+  s.add_development_dependency 'rake', '12.3.1'
   s.add_development_dependency 'rubocop', '0.62.0'
   s.add_development_dependency 'rubocop-rspec', '1.31.0'
 end
