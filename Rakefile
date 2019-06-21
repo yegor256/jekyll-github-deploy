@@ -1,7 +1,6 @@
-# encoding: utf-8
-#
-# Copyright (c) 2014 TechnoPark Corp.
-# Copyright (c) 2014 Yegor Bugayenko
+# frozen_string_literal: true
+
+# Copyright (c) 2014-2019 Yegor Bugayenko
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the 'Software'), to deal
@@ -23,7 +22,6 @@
 
 require 'rubygems'
 require 'rake'
-require 'rdoc'
 require 'rake/clean'
 
 CLEAN = FileList['coverage', 'rdoc']
@@ -36,27 +34,9 @@ def version
   Gem::Specification.load(Dir['*.gemspec'].first).version
 end
 
-task default: [:clean, :test, :rubocop]
-
-require 'rake/testtask'
-desc 'Run all unit tests'
-Rake::TestTask.new(:test) do |test|
-  test.libs << 'lib' << 'test'
-  test.pattern = 'test/**/test_*.rb'
-  test.verbose = false
-end
-
-require 'rdoc/task'
-desc 'Build RDoc documentation'
-Rake::RDocTask.new do |rdoc|
-  rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "#{name} #{version}"
-  rdoc.rdoc_files.include('README*')
-  rdoc.rdoc_files.include('lib/**/*.rb')
-end
+task default: %i[clean rubocop]
 
 require 'rubocop/rake_task'
-desc 'Run RuboCop on all directories'
 RuboCop::RakeTask.new(:rubocop) do |task|
   task.fail_on_error = true
   task.requires << 'rubocop-rspec'
