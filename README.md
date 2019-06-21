@@ -7,7 +7,7 @@
 [![Build Status](https://travis-ci.org/yegor256/jekyll-github-deploy.svg)](https://travis-ci.org/yegor256/jekyll-github-deploy)
 [![Gem Version](https://badge.fury.io/rb/jgd.svg)](http://badge.fury.io/rb/jgd)
 [![Code Climate](http://img.shields.io/codeclimate/github/yegor256/jekyll-github-deploy.svg)](https://codeclimate.com/github/yegor256/jekyll-github-deploy)
-[![Test Coverage](https://img.shields.io/codecov/c/github/yegor256/jekyll-github-deploy.svg)](https://codecov.io/github/yegor256/jekyll-github-deploy?branch=master)
+[![Maintainability](https://api.codeclimate.com/v1/badges/591bc6ae3097ea4b28be/maintainability)](https://codeclimate.com/github/yegor256/jekyll-github-deploy/maintainability)
 [![Hits-of-Code](https://hitsofcode.com/github/yegor256/jekyll-github-deploy)](https://hitsofcode.com/view/github/yegor256/jekyll-github-deploy)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/yegor256/jekyll-github-deploy/blob/master/LICENSE.txt)
 
