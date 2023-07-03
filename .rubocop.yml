@@ -3,7 +3,9 @@ AllCops:
     - 'bin/**/*'
     - 'assets/**/*'
   DisplayCopNames: true
-  TargetRubyVersion: 2.3
+  TargetRubyVersion: '2.3'
+  NewCops: enable
+  SuggestExtensions: false
 
 Lint/RescueException:
   Enabled: false

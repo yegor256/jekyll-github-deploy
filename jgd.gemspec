@@ -23,11 +23,7 @@
 require 'English'
 
 Gem::Specification.new do |s|
-  s.specification_version = 2 if s.respond_to? :specification_version=
-  if s.respond_to? :required_rubygems_version=
-    s.required_rubygems_version = Gem::Requirement.new('>= 0')
-  end
-  s.rubygems_version = '2.2.2'
+  s.required_rubygems_version = Gem::Requirement.new('>= 0') if s.respond_to? :required_rubygems_version=
   s.required_ruby_version = '>= 2.3'
   s.name = 'jgd'
   s.version = '2.0.snapshot'
@@ -39,12 +35,9 @@ Gem::Specification.new do |s|
   s.homepage = 'http://github.com/yegor256/jekyll-github-deploy'
   s.files = `git ls-files`.split($RS)
   s.executables = s.files.grep(%r{^bin/}) { |f| File.basename(f) }
-  s.test_files = s.files.grep(%r{^(test|spec|features)/})
   s.rdoc_options = ['--charset=UTF-8']
   s.extra_rdoc_files = ['README.md', 'LICENSE.txt']
   s.add_runtime_dependency('jekyll', '>=1.5.1')
   s.add_runtime_dependency('trollop', '2.9.9')
-  s.add_development_dependency 'rake', '12.3.1'
-  s.add_development_dependency 'rubocop', '0.62.0'
-  s.add_development_dependency 'rubocop-rspec', '1.31.0'
+  s.metadata['rubygems_mfa_required'] = 'true'
 end
