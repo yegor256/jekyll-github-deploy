@@ -25,4 +25,4 @@ gemspec
 
 gem 'rake', '13.0.6', require: false
 gem 'rubocop', '1.54.2', require: false
-gem 'rubocop-rspec', '2.22.0', require: false
+gem 'rubocop-rspec', '2.23.0', require: false
