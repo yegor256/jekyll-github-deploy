@@ -39,7 +39,7 @@ end
 
 branch = opts[:branch]
 branch_from = opts[:branch_from]
-config = opts[:config]
+config = File.expand_path(opts[:config])
 fail 'branch can\'t be empty' if branch.empty?
 fail 'branch-from can\'t be empty' if branch_from.empty?
 fail 'config can\'t be empty' if config.empty?
