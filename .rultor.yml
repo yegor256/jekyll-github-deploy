@@ -1,5 +1,5 @@
 docker:
-  image: yegor256/rultor-image:1.21.0
+  image: yegor256/rultor-image:1.22.0
 readers:
   - "urn:github:526301"
 decrypt:
@@ -7,8 +7,9 @@ decrypt:
 install: |-
   git config --global user.email "test@example.com"
   git config --global user.name "Test"
-  sudo bundle install --no-color "--gemfile=$(pwd)/Gemfile"
+  bundle install --no-color
 release:
+  pre: false
   script: |-
     bundle exec rake
     ./test.sh
