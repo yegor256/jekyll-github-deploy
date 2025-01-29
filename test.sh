@@ -19,7 +19,7 @@ cd "${CWD}"
 cd "${TMP}"
 git checkout gh-pages
 ls -al
-cat test.html | grep "hello"
+grep "hello" < test.html
 cd "${CWD}"
 rm -rf "${TMP}"
 
