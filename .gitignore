@@ -1,5 +1,11 @@
-Gemfile.lock
 *.gem
-.bundle/
 .DS_Store
+.bundle/
+.idea/
+.yardoc/
+Gemfile.lock
+coverage/
+doc/
+node_modules/
+rdoc/
 vendor/
