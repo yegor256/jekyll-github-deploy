@@ -1,10 +1,10 @@
 <img src="/logo.svg" width="64px" height="64px"/>
 
-[![DevOps By Rultor.com](http://www.rultor.com/b/yegor256/jekyll-github-deploy)](http://www.rultor.com/p/yegor256/jekyll-github-deploy)
+[![DevOps By Rultor.com](https://www.rultor.com/b/yegor256/jekyll-github-deploy)](https://www.rultor.com/p/yegor256/jekyll-github-deploy)
 [![We recommend RubyMine](https://www.elegantobjects.org/rubymine.svg)](https://www.jetbrains.com/ruby/)
 
 [![rake](https://github.com/yegor256/jekyll-github-deploy/actions/workflows/rake.yml/badge.svg)](https://github.com/yegor256/jekyll-github-deploy/actions/workflows/rake.yml)
-[![Gem Version](https://badge.fury.io/rb/jgd.svg)](http://badge.fury.io/rb/jgd)
+[![Gem Version](https://badge.fury.io/rb/jgd.svg)](https://badge.fury.io/rb/jgd)
 [![Hits-of-Code](https://hitsofcode.com/github/yegor256/jekyll-github-deploy)](https://hitsofcode.com/view/github/yegor256/jekyll-github-deploy)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/yegor256/jekyll-github-deploy/blob/master/LICENSE.txt)
 
