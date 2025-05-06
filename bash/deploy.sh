@@ -1,7 +1,9 @@
 #!/bin/bash
-set -x
-set -e
-set -o pipefail
+
+# SPDX-FileCopyrightText: Copyright (c) 2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
+set -ex -o pipefail
 
 URL=$1
 BRANCH=$2

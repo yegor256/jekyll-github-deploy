@@ -1,6 +1,9 @@
 #!/bin/bash
-set -e
-set -x
+
+# SPDX-FileCopyrightText: Copyright (c) 2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
+set -ex -o pipefail
 
 TMP=$(mktemp -d -t jgd-XXXX)
 
