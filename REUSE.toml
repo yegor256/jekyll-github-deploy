@@ -5,7 +5,6 @@ version = 1
 [[annotations]]
 path = [
     ".DS_Store",
-    "rubygems.yml.asc",
     ".gitattributes",
     ".gitignore",
     ".pdd",
@@ -30,6 +29,7 @@ path = [
     "Gemfile.lock",
     "README.md",
     "renovate.json",
+    "rubygems.yml.asc",
 ]
 precedence = "override"
 SPDX-FileCopyrightText = "Copyright (c) 2025 Yegor Bugayenko"
