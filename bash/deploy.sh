@@ -36,7 +36,7 @@ if [ ! -e _site ]; then
   exit 1
 fi
 
-cp -R _site "${TEMP}" || exit 1
+cp -R _site "${TEMP}"
 
 cd "${TEMP}"
 rm -rf "${CLONE}"
